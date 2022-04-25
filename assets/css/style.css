@@ -4,7 +4,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 
-:root {
+ :root {
     --header-height: 3.5rem;
     /*56px*/
     /*========== Colors ==========*/
@@ -63,7 +63,7 @@ html {
 
 body {
     margin: var(--header-height) 0 0 0;
-    background-color: var(--body-color);
+    background-color: hsl(0, 0%, 98%);
     color: var(--text-color);
     font-family: var(--body-font);
     overflow-x: hidden;
@@ -85,6 +85,10 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+p {
+    color: hsl(233, 8%, 62%);
 }
 
 @media screen and (min-width: 968px) {
@@ -200,8 +204,6 @@ button {
 
 /*============= HOME ============*/
 
-.home {}
-
 .bg__mobile,
 .bg__desktop {
     position: absolute;
@@ -244,6 +246,9 @@ button {
     margin: 0 auto 1.5rem;
 }
 
+
+/*============= FEATURES ============*/
+
 .features {
     background-color: hsl(220, 16%, 96%);
     text-align: center;
@@ -275,8 +280,39 @@ button {
     margin-bottom: var(--mb-1-5);
 }
 
-.feature__title {
-    margin-bottom: var(--mb-1);
+
+/*============= ARTICLES ============*/
+
+.article__header {
+    margin-bottom: var(--mb-2);
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.article img {
+    border-radius: .3rem .3rem 0 0;
+    margin-bottom: var(--mb-1-5);
+}
+
+.article__text {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: .9rem;
+}
+
+.article__title {
+    color: #343A40;
+    font-size: 1.2rem;
+}
+
+.article {
+    margin-bottom: 5rem;
+    background-color: #fff;
+}
+
+.article__description {
+    margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -333,7 +369,8 @@ button {
         width: 600px;
     }
     .container {
-        padding: 1rem 2.5rem;
+        padding: 1rem .2rem;
+        max-width: 80%;
     }
     .home {
         margin-top: -6%;
@@ -361,12 +398,12 @@ button {
         margin: 0;
     }
     .features__description {
-        max-width: 80%;
+        max-width: 55%;
     }
     .features__content {
         display: flex;
         width: 100%;
-        justify-content: space-evenly;
+        column-gap: 1rem;
         align-items: flex-start;
     }
     .feature {
@@ -375,17 +412,30 @@ button {
     .feature__description {
         font-size: .9rem;
     }
+    /*==== Articles =====*/
+    .article__header {
+        text-align: left;
+    }
+    .articles_content {
+        display: flex;
+        column-gap: 1rem;
+    }
+    .articles__img {}
+    @media screen and (min-width: 1024px) {
+        .bg__mobile {
+            display: none;
+        }
+        .hide-desktop {
+            display: none;
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
-@media screen and (min-width: 1024px) {
-    .bg__mobile {
-        display: none;
-    }
-    .hide-desktop {
-        display: none;
-    }
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
+
+}
+
 }
